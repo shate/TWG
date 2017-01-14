@@ -3,7 +3,7 @@ $ico-layout:smart;
 $ico-sprite-dimensions: true;            
 @include all-ico-sprites;
 
-@import 'utils/functions';
+
 @import 'base/reset';
 
 @import 'utils/variables';
