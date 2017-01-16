@@ -45,14 +45,15 @@
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
-//Usage:
-// .selector {
-//   color: red;
-  
-//   @include respond-to('small') {
-//     color: blue;
-//   }
-// }	
+@mixin bg($bg-height){
+  @extend  %bg-size;
+  .wrap{
+    min-height: $bg-height;
+    max-height: $bg-height;
+    height: $bg-height;
+    overflow: hidden;
+  }
+}
 @mixin circle($circle-size){
   position: relative;
   width:  $circle-size;

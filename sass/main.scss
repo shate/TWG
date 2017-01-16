@@ -1,5 +1,5 @@
 $ico-layout:smart;
-@import "ico/*.png"; 
+@import "ico/*.png";
 $ico-sprite-dimensions: true;            
 @include all-ico-sprites;
 
@@ -12,16 +12,15 @@ $ico-sprite-dimensions: true;
 @import 'base/typography';
 @import 'base/base';
 
+@import 'components/slick';
+@import "components/buttons";
+@import "components/fancybox";
 
-
-
-
-@import 'utils/helpers';
 
 @import 'layout/navigation';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/sidebar';
+
 @import 'layout/forms';
 
 

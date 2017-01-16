@@ -1,18 +1,15 @@
 header {
 	height: $headrH;
 	background-color: $header-color;
-	
-	.logo{		
-	    text-indent: -9999px;
-	     outline: none;	     
 
+	nav{
+		text-align: center;
+		padding-top: 33px;
 	}
-	article{
-		&:first-child{
-			@include span(2);
-		}
-		&:last-child{
-			@include span(10 last);
-		}
+	&.bg-header{
+		@extend %bg-size;
+	}
+	.wrap{
+		padding-top: 0;
 	}
 }

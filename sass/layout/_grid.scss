@@ -2,22 +2,15 @@
 @import "susy";
 @import 'photoshop-drop-shadow';
 $susy:(
-	container :1000px,
+	container :1200px,
 	columns: 12,
-
-    
-  
-  debug: (
-    image: show,
-    color: rgba(#66f, .65),
-    output : overlay
-   
-  )
   );
 
 //@include layout(12 (80px 10px) static);
 .wrap{
 	@include container;
+	min-width:1200px;
+	padding-top: 45px;
 }
 .content{	
 	

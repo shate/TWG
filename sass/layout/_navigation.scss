@@ -1,8 +1,64 @@
-nav {
-	
-}
+ %a{
+	 font-family:"MyriadPro-Semibold";
+	 text-transform: uppercase;
+	 font-size: 16px;
+	 color: #cdb58c;
+	 display: inline-block;
+	 position: relative;
+ }
 ul.header_nav {	
-	@include horizontal-list(10px);
+	@include inline-block-list(45px);
+	li{
+
+		a{
+			@extend %a;
+
+			&:before{
+				content: '';
+				@include ico-sprite(arrow-nav) ;
+				position: absolute;
+				left: -17px;
+				top: 0px;
+			}
+			&:hover{
+				color: #fff;
+				&:before{
+					@include ico-sprite(arrow-nav_h) ;
+				}
+			}
+		}
+
+	}
 }
 
+ul.footer_nav {
+	@include inline-block-list(35px);
+	padding-top: 15px;
 
+	li{
+		position: relative;
+		&:first-child{
+			padding-left: 0;
+		}
+		a{
+			@extend %a;
+			&:hover{
+				color: #fff;
+
+			}
+		}
+		&:after{
+			content: '|';
+			font-size: 12px;
+			position: absolute;
+			right: -1px;
+			top: 2px;
+			color: #cdb58c;
+		}
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+	}
+}

@@ -1,9 +1,72 @@
-button{
-  font-family: $base-font;  
+a[class^="ico-btn-"], a[class*=" ico-btn-"]{
+  font-family: "OfficinaSansBold";
+  color: #fff;
+  font-size: 44px;
+  outline: none;
+  padding: 0;
+  text-align: center;
+  display: block !important;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  letter-spacing: -0.04em;
+  margin-top: 13px;
+  margin-bottom: 25px;
+
+}
+.ico-btn-1{
+  @include ico-sprite(btn1);
+  line-height: ico-sprite-height(btn1);
+
+
+}
+.ico-btn-2{
+  @include ico-sprite(btn2);
+  line-height: ico-sprite-height(btn2);
+}
+.ico-btn-3{
+  @include ico-sprite(btn3);
+  line-height: ico-sprite-height(btn3);
+}
+.ico-btn-4{
+  @include ico-sprite(btn4);
+  line-height: ico-sprite-height(btn4);
+  font-size: 30px !important;
+}
+.ico-btn-5{
+  @include ico-sprite(btn5);
+  line-height: ico-sprite-height(btn5);
+  font-size: 30px !important;
+}
+button:not(.slick-arrow){
+  font-family: "OfficinaSansBold";
+  font-size: 19px;
+  color: #e6fee6;
   cursor: pointer;
   background-color: transparent;
   outline: none;
   padding: 0;
   border: none;
   text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  float: left;
+  height: 40px;
+  width: 160px;
+  margin-top: -1px;
+  margin-left: -1px;
+
+  &.go{
+    @include background-image(linear-gradient(#17711c, #034404));
+    border-top: 1px solid #2ba931;
+
+  }
+  &.go-brown{
+    @include background-image(linear-gradient(#9e5d04, #6c2b02));
+    border-top: 1px solid #bd9314;
+    border-bottom: 1px solid #7c3302;
+
+  }
 }

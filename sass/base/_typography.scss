@@ -1,29 +1,59 @@
 
+@include font-face("Betina Bold", font-files("Betina Script Rus Bold.ttf", "Betina Script Rus Bold.eot","Betina Script Rus Bold.svg","Betina Script Rus Bold.otf"));
+@include font-face("MyriadPro-Semibold", font-files("MyriadPro-Semibold.ttf", "MyriadPro-Semibold.eot","MyriadPro-Semibold.svg","MyriadPro-Semibold.ttf"));
+@include font-face("OfficinaSansBold", font-files("OfficinaSansBold.ttf", "OfficinaSansBold.eot","OfficinaSansBold.ttf"));
+@include font-face("OfficinaSansBook", font-files("OfficinaSansBook.ttf", "OfficinaSansBook.eot","OfficinaSansBook.ttf"));
+@include font-face("OfficinaSansBookItalic", font-files("OfficinaSansBookItalic.ttf", "OfficinaSansBookItalic.eot","OfficinaSansBookItalic.ttf"));
+@include font-face("slick", font-files("slick.ttf", "slick.eot","slick.svg","slick.ttf"));
 
-@include font-face("a_grotic", font-files("a_grotic.ttf", "a_grotic.eot","a_grotic.svg"));
-@include establish-baseline;
 body{
 	font-family: $base-font;	
 	color: $base-font-color;
 	font-size: $base-font-size;	
 }
+ b{
+	 font-family: "OfficinaSansBold";
+ }
+h1,h2,h3,h4{
+	font-family:"OfficinaSansBold";
+	text-align: center;
+	margin-bottom: 10px;
 
+}
 h1,h2{
-	font-family: "Calibri-Light";
-	
+	font-size: 44px;
+	letter-spacing: -.04em;
 }
-h1{
-@include adjust-font-size-to(30px);
-	
-}
-h2{	
-	@include adjust-font-size-to(30px);
-}
+
 h3{
 	@include adjust-font-size-to(30px);
 }
 h4{
-	@include adjust-font-size-to(30px);
+	font-size: 30px;
+	margin-top: 25px;
+	letter-spacing: -0.035em;
+	&.green{
+		color: #6ba927;
+	}
+}
+h5{
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 0.02em;
+	margin-bottom: 10px;
+	&.purple{
+		color: #af194e;
+	}
+	&.green{
+		color: #6ba927;
+	}
+	&.italic{
+		font-family: "OfficinaSansBookItalic";
+	}
+	&.upper{
+		text-transform: uppercase;
+	}
+
 }
 
 a{
@@ -32,5 +62,31 @@ a{
 }
 
 p{
-	@include hyphenation;
+	&.betina{
+		font-family: "Betina Bold";
+		font-size: 50px;
+		text-align: center;
+
+		span{
+			color: #f8daa6;
+		}
+
+	}
+}
+.brown{
+	color: #f8daa6;
+}
+.brown2{
+	color: #ddc69e;
+	text-align: center;
+}
+.title{
+	font-family:"OfficinaSansBold";
+	font-size: 22px;
+	text-align: center;
+	letter-spacing:-0.02em;
+}
+a.green-link{
+	color: #7cc030;
+	font-size: 20px;
 }
