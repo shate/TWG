@@ -41,7 +41,47 @@ html,body{
 }
 .bg-1-1{
   @include bg(900px);
+  position: relative;
+  overflow: hidden;
+  &:before{
+    content: '';
+  @include ico-sprite(corn);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -(ico-sprite-width(corn)/2);
+    z-index: 100;
+  }
+  .ico-player,.ico-watcher.clone{
+    position: absolute;
+    z-index: 10;
+    bottom: -10px;
+    left: 50%;
+  }
+  .ico-player{
+    margin-left: 30px;
+  }
+  .ico-watcher.clone{
+    margin-left: -60px;
+    bottom: 0;
+    opacity: 0;
+  }
+  .ico-watcher,.ico-player.clone{
+    position: absolute;
+    z-index: 10;
+    bottom: -10px;
+    left: 50%;
+  }
+  .ico-watcher{
+    margin-left: -540px;
+
+  }
+  .ico-player.clone{
+    margin-left: -440px;
+    opacity: 0;
+  }
 }
+
 .bg-2{
    @include bg(468px);
  }
