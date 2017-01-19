@@ -16,45 +16,56 @@ $(document).ready(function(){
         'titlePosition' : 'over'
     });
 
-    function Replase(elem){
 
-        this.elem = elem;
-        console.log(this.elem)
 
-        this.anim = function(){
-            return    this.elem.animate({
-                opacity: 1
-            }, 1000);
-        }
-
-    }
-
+    var currentCount = 1;
     function reload(){
-
 
         var  player = $('.ico-player') ;
         var  watcher = $('.ico-watcher') ;
         var  player_clone = $('.ico-player.clone') ;
         var  watcher_clone = $('.ico-watcher.clone') ;
 
-      if($("i").is(".ico-watcher.clone"))  return;
 
-        var player_opt= {
-            marginLeft: 30 ,
-            opacity: 0
+
+
+        var counter = function makeCounter() {
+                return currentCount++;
         }
-        var watcher_opt= {
-            marginLeft: -540 ,
-            opacity: 0
-        }
+        var count=  counter() ;
 
+        var i=0,plus=0,minus = 0;
 
-        watcher.clone().appendTo($('#stage')).css(player_opt).addClass('clone');
+        var timerId = setInterval(function() {
+            i++;
+          plus =  +(i*0.1).toFixed(1)
 
-       var clone= new Replase(watcher_clone) ;
-        clone.anim()
+;
+            minus = +(1 - i*0.1).toFixed(1);
+
+            console.log(minus, plus)
+            if(count%2) {
+                player.css({'opacity': minus});
+                watcher.css({'opacity': minus});
+                player_clone.css({'opacity': plus});
+                watcher_clone.css({'opacity': plus});
+            }
+            else{
+                player.css({'opacity': plus}) ;
+                watcher.css({'opacity': plus}) ;
+                player_clone.css({'opacity': minus}) ;
+                watcher_clone.css({'opacity': minus}) ;
+            }
+        }, 50);
+
+// через 5 сек остановить повторы
+        setTimeout(function() {
+            clearInterval(timerId);
+
+        }, 500);
+
 
     }
 
-    setInterval(reload, 5000);
+    setInterval(reload, 10000);
 })
