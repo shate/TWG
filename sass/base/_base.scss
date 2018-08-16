@@ -88,6 +88,7 @@ html,body{
 .bg-3{
   @include bg(2670px);
   width: 100%;
+  padding-bottom: 30px;
 
 }
 .bg-4{
@@ -104,6 +105,8 @@ html,body{
   overflow: hidden;
   width: 100%;
   padding: 15px;
+  height: 116px;
+  min-width: 225px;
 }
 .bg-line{
   position: relative;
@@ -223,6 +226,7 @@ html,body{
   margin: auto;
   >div{
     width: 225px;
+    max-width: 225px;
     display: inline-block;
     float: left;
     margin-right: 45px;
@@ -234,6 +238,9 @@ html,body{
       line-height: 0;
       border: 1px solid #704740;
       display: block;
+      height: 309px;
+      width: 100%;
+      overflow: hidden;
     }
     .description{
       p{
@@ -263,6 +270,8 @@ html,body{
   background-color:rgba(#05152a, 0.85);
   height: 130px;
   max-height: 130px;
+  width: 225px;
+  max-width: 225px;
   overflow: hidden;
   border: 1px solid #245dac;
   -webkit-border-radius: 5px;
@@ -288,10 +297,14 @@ html,body{
         color: #329dda;
         display: inline-block;
         width: 70px;
+        float: left;
+
       }
       p{
-        float: right;
+        margin-left: 70px;
         width: 109px;
+        max-height: 28px;
+        overflow: hidden;
       }
     }
   }
@@ -303,6 +316,7 @@ html,body{
   @include background-image(linear-gradient(#5b012a, #2d051b));
   border: 1px solid #520e2d;
   height: 40px;
+  width: 100%;
     .counter{
       width: 60px;
       line-height: 40px;
